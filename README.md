@@ -1,5 +1,5 @@
 # SafeTeal Product Website 📌
-<u>http://127.0.0.1:3000/SafeTeal-App-Website/</u>
+<u>https://adrienthefragrance.github.io/SafeTeal-Product-Website/</u>
 
 ### Website Preview
 <p align="center"> 

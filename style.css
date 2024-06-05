@@ -1,0 +1,129 @@
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+
+@media screen and (min-width: 991px) {
+  .lightbox .modal-dialog {
+      width:960px
+  }
+}
+
+
+nav.navbar{
+  margin-bottom: .1%;
+  padding: 2px;
+  padding-right: 10px;
+}
+
+li.nav-item {
+  list-style-type: none;
+  float: center;
+  color: #67B0BD;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 25px;
+}
+
+#home {
+  background-image: linear-gradient(to right, #67B0BD 1% , #1D1D1D 60%);
+  padding: 80px;
+} 
+
+#overview{
+  padding: 50px;
+}
+
+img.components-phone {
+  float: right;
+  margin-left: 200px;
+}
+
+div.section-description {
+  padding: 20px;
+  float: center;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #32325d;
+}
+
+img.ecomm-2 {
+  left: 3%;
+  top: 7%;
+  height: 60px;
+  border-radius: 5px;
+  position: relative;
+  animation: ecomm 5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes ecomm {
+0%   {left: 0px; top: 0px;}
+25%  {left: 10px; top: 0px;}
+100% {left: 0px; top: 0px;}
+}
+
+img.icon {
+  left: 3%;
+  top: 7%;
+  height: 300px;
+  border-radius: 5px;
+  position: relative;
+  animation: icon 5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes icon {
+0% {top: 0px; bottom: 0px;}
+25%  {top: 10px; bottom: 0px;}
+}
+
+.image-stack {
+display: grid;
+position: relative; 
+grid-template-columns: repeat(12, 1fr);
+}
+
+.image-stack__item--bottom {
+grid-column: 4 / -1;
+grid-row: 1;
+}
+
+.image-stack__item--top {
+grid-row: 1;
+grid-column: 3;
+padding-top: 20%; 
+z-index: 1; 
+}

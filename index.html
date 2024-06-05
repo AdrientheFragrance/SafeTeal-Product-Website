@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeTeal</title>
+  <link rel="icon" type="image/x-icon" href="./images/safeteal-icon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+
+<style>
+
+  nav.navbar{
+    margin-bottom: .1%;
+    padding: 2px;
+    padding-right: 10px;
+  }
+
+  li.nav-item {
+    list-style-type: none;
+    float: center;
+    color: #67B0BD;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 25px;
+  }
+
+
+  #home {
+    background-image: linear-gradient(to right, #67B0BD 1% , #1D1D1D 60%);
+    padding: 80px;
+  } 
+
+  #overview{
+    padding: 50px;
+  }
+
+  img.components-phone {
+    float: right;
+    margin-left: 200px;
+  }
+
+  div.section-description {
+    padding: 20px;
+    float: center;
+  }
+  
+  h1, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    text-shadow: gray 1px 0 10px;
+}
+
+img.ecomm-2 {
+    left: 3%;
+    top: 7%;
+    height: 60px;
+    border-radius: 5px;
+    position: relative;
+    animation: ecomm 5s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ecomm {
+  0%   {left: 0px; top: 0px;}
+  25%  {left: 10px; top: 0px;}
+  100% {left: 0px; top: 0px;}
+}
+
+img.icon {
+    left: 3%;
+    top: 7%;
+    height: 300px;
+    border-radius: 5px;
+    position: relative;
+    animation: icon 5s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    filter: drop-shadow(0 0 0.75rem #729199);
+}
+
+@keyframes icon {
+  0% {top: 0px; bottom: 0px;}
+  25%  {top: 10px; bottom: 0px;}
+}
+
+.image-stack {
+  display: grid;
+  position: relative; 
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.image-stack__item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
+
+.image-stack__item--top {
+  grid-row: 1;
+  grid-column: 4;
+  padding-top: 20%; 
+  z-index: 1; 
+}
+
+#break {
+  text-align: center;
+  background-color: #ACD0D0;
+  padding: 50px;
+  padding-left: 100px;
+}
+
+#features {
+  text-emphasis-color: white;
+  color: white;
+  background-color: #1D1D1D;
+  padding: 20px;
+}
+
+#data {
+  text-align: left;
+  text-emphasis-color: white;
+  color: white;
+  background-image: url("./images/data-bg.jpg");
+  background-size: cover;
+  padding: 30px;
+}
+
+h2.feature {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: .5rem;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(46, 73, 84);
+}
+
+h3.data {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  text-shadow: rgb(94, 136, 152) 1px 0 10px;
+}
+
+div.icon-square {
+  margin: 0 auto;
+  border-radius: 100%;
+  padding: 8px;
+  box-shadow: gray 1px 0 10px;
+}
+
+p{
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 17px;
+  color: white;
+}
+
+img.screen {
+  width: 270px;
+  height: 600px;
+  border-radius: 25px 25px;
+  box-shadow: gray 1px 0 10px;
+}
+
+.image-container img:hover {
+  zoom: 1.2;
+  margin: 0 auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#end {
+  background-image: linear-gradient(to bottom, #ACD0D0 50% , white 100%);
+  padding: 100px;
+  padding-bottom: 150px; 
+}
+
+
+h2.break {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  text-shadow: white 1px 0 10px;
+}
+
+h2.end {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.5;
+  margin: 0px;
+  text-align: center;
+  color: rgb(46, 73, 84);
+}
+
+p.end {
+  font-size: 25px;
+  text-align: center;
+  color: rgb(46, 73, 84);
+}
+
+</style>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./images/safeteal-logo.png" alt="logo" width="200" height="100" class="d-inline-block align-text-top">
+    </a>
+      <ul class="navbar">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#preview">Preview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#data">Data</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+
+
+
+<div id="home">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-4 col-md-8 ml-auto mr-auto pt-100">
+    <div class="section-description">
+    <h3 class="display-4 text-white">Enjoy a safer travelling experience with </h3>
+    <br><br>
+    <p class="text-white">
+      Our social navigation app idea will allow users to have an anonymous account, navigate, and report inappropriate behavior in the user's provided area. Our goal is to promote public safety and awareness.  
+    </p>
+    </div>
+    </div>
+    <div class="col-lg-8 col-md-16 ml-auto">
+      <div class="image-stack">
+        <div class="image-stack__item image-stack__item--top">
+          <img class="ecomm-2" src="./images/notification.png" alt="alt image">
+        </div>
+        <img class="icon" src="./images/safeteal-icon.png" alt="safeteal-icon">
+        <div class="image-stack__item image-stack__item--bottom">
+          <img class="components-phone" src="./images/navigation-screen.png" height="500px" margin-left="200px" alt="navigation-screen">
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+<div id="break">
+  <div class="container-fluid">
+    <h2 class="feature">Special features included with your safety in mind.</h2>
+  </div>
+</div>
+
+
+<div id="features">
+  <div class="container-fluid">
+    <div class="container px-4 py-5" id="hanging-icons">
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill-check" viewBox="0 0 16 16">
+              <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+            </svg>
+           </div>
+          <div>
+            <h3 class="feature">Identity Verification</h3>
+            <p>Accounts will be linked to real identities to minimize false reports and ensure accountability.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="feature">Navigation</h3>
+            <p>Embedded Maps will allow easy navigation of street views and searching up locations.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="feature">Report</h3>
+            <p>Users can submit reports on various categories of assault, including but not limited to verbal assault, physical assault, sexual assault, aggravated assault, etc.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="feature">View Reports</h3>
+            <p>Users can view all reports, or reports in the user's area, filtered by date and public/private location.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg"width="25" height="25" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="feature">Save Locations to Notify</h3>
+            <p>Input a location and control whether to notify incident reports near the location.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telephone-x-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zm9.261 1.135a.5.5 0 0 1 .708 0L13 2.793l1.146-1.147a.5.5 0 0 1 .708.708L13.707 3.5l1.147 1.146a.5.5 0 0 1-.708.708L13 4.207l-1.146 1.147a.5.5 0 0 1-.708-.708L12.293 3.5l-1.147-1.146a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="feature">Add Emergency Contacts</h3>
+            <p>Users can request immediate police assistance or add the phone numbers of important people to call during emergencies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="preview">
+  <div class="container-fluid">
+     <div class="container">
+
+      <br></br>
+      <h2 class="feature">Preview of App Pages</h2><br></br>
+      <div class="row">
+      <div class="col-md-4 ml-8 mr-auto text-left">
+      </div>
+      </div>
+      <div class="space-50"></div>
+      <div class="image-container">
+      <div class="row">
+      <div class="col-md-3 col-6">
+      <img class="screen" src="./images/login-page.png" alt="login-page">
+      </div>
+      <div class="col-md-3 col-6">
+      <img class="screen" src="./images/nav-page.png" alt="nav-page">
+      </div>
+      <div class="col-md-3 col-6">
+      <img class="screen" src="./images/report-page.png" alt="report-page">
+      </div>
+      <div class="col-md-3 col-6">
+      <img class="screen" src="./images/view-page.png" alt="view-page">
+      </div>
+      </div>
+      <br></br>
+      <h2 class="feature">Profile Pages</h2><br></br>
+      <div class="space-50"></div>
+      <div class="image-container">
+      <div class="row">
+        <div class="col-md-2 col-6">
+          </div>
+      <div class="col-md-3 col-6">
+      <img class="screen" src="./images/profile-page.png" alt="profile-page">
+      </div>
+      <div class="col-md-3 col-6">
+      <img class="screen" src="./images/saved-page.png" alt="profile-page">
+      </div>
+      <div class="col-md-3 col-6">
+      <img class="screen" src="./images/contacts-page.png" alt="contacts-page">
+      </div>
+      </div>
+      </div>
+      </div>
+  </div>
+</div>
+<br></br>
+
+
+
+<div id="break">
+  <div class="container-fluid">
+    <h2 class="feature">Fluid. Dynamic. And completely free.</h2>
+  </div>
+</div>
+
+
+<div id="data">
+  <div class="container-fluid">
+    <div class="container">
+      <br></br>
+      <p class="text-center">
+        Your safety is our goal. We ensure you that your data will be safe in our hands. <br>
+        SafeTeal will incorporate multiple types of data. Types of data include user data, location data, contact data, and report data.
+      </p>
+      </div>
+      </div>
+      <div class="features-1 mt-5">
+      <div class="row">
+      <div class="col-md-6">
+      <div class="info text-center p-5">
+      <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+      <i class="ni ni-check-bold"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" class="center" width="30" height="30" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+        <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+        <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+      </svg>
+      </div>
+      <h3 class="feature">User Data</h3>
+      <p>(Filled by the user when creating an account)<br></br>
+      Email and password to log in<br>
+      Username to identify a user<br>
+      ID Verification of a user
+      </p>
+      </div>
+      
+      </div>
+      <div class="col-md-6">
+      <div class="info text-center p-5">
+      <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
+      <i class="ni ni-planet"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" class="center" width="30" height="30" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+        <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+        <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+      </svg>
+      </div>
+      <h3 class="feature">Location Data</h3>
+      <p>(User can turn on to access reports in given location)<br></br>
+        User’s current location<br>
+        Inputted saved location
+      </p>
+    </div>
+    <div class="col-sm">
+    </div>
+
+  <div class="row"></div>
+      </div>
+      <div class="col-md-6">
+      <div class="info text-center p-5">
+      <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
+      <i class="ni ni-settings"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" class="center" width="30" height="30" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+        <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+        <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+      </svg>
+      </div>
+      <h3 class="feature">Contact Data</h3>
+      <p> (Contact information filled by user)<br></br>
+        Associated name<br>
+        Phone number
+      </p>
+      </div>
+      </div>
+      <div class="col-md-6">
+      <div class="info text-center p-5">
+      <div class="icon icon-shape icon-shape-info rounded-circle mb-4">
+      <i class="ni ni-building"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" class="center" width="30" height="30" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+        <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+        <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+      </svg>
+      </div>
+      <h3 class="feature">Report Data</h3>
+      <p>(Filled by the user, reporting the incident)<br></br>
+        Categories of assault<br>
+        Public or private assault<br>
+        Date/time assault occured<br>
+        Location assault occured
+
+      </p></div>
+      </div>
+      </div>
+      </div>
+      </div>
+</div>
+
+<div id="end">
+  <div class="container-fluid">
+    <p class="end">Be aware of your surroundings, keep your loved ones safe, and be educated on assault. </p>
+    <h2 class="end">Travel safe with SafeTeal. </h2>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Adrien Rozario</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+      <li><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li></li><a href="#" class="nav-link px-2 text-body-secondary">Stakeholders</a></li>
+      <li><a href="#" class="nav-link px-2 text-body-secondary">Metadata</a></li>
+    </ul>
+  </footer>
+</div>
+
+
+</body>
+
+</html>
